@@ -1,0 +1,68 @@
+/* Reset default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #f0f0f0 0%, #d9d9d9 100%); /* Soft gray gradient background */
+    color: #333; /* Default text color */
+    line-height: 1.6; /* Improved readability */
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333; /* Dark background color */
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000; /* Ensure navbar stays on top */
+}
+
+.navbar .logo {
+    font-size: 24px;
+    color: #ffd700; /* Golden yellow */
+    font-weight: bold; /* Bold font for the logo */
+}
+
+.navbar .nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar .nav-links a {
+    color: white; /* White text */
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease, transform 0.3s ease; /* Transition for color and transform */
+    position: relative; /* Positioning for the underline effect */
+}
+
+.navbar .nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background-color: #ffd700; /* Yellow underline */
+    transition: width 0.3s ease;
+}
+
+.navbar .nav-links a:hover::after {
+    width: 100%; /* Full width underline on hover */
+}
+
+.navbar .nav-links a:hover {
+    color: #ffd700; /* Yellow text on hover */
+    transform: scale(1.1); /* Slight scale up effect */
+}
